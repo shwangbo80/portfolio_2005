@@ -122,25 +122,32 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center">
-					<div class="text-2xl font-bold text-white">
+					<div class="text-2xl font-bold text-white" aria-label="FlowAI homepage logo">
 						Flow<span class="text-primary-500">AI</span>
 					</div>
 				</div>
 				<div class="hidden md:block">
 					<div class="flex items-center space-x-8">
-						<a href="#home" class="text-gray-300 hover:text-primary-500 transition-colors">Home</a>
-						<a href="#services" class="text-gray-300 hover:text-primary-500 transition-colors">Features</a>
-						<a href="#projects" class="text-gray-300 hover:text-primary-500 transition-colors">Use Cases</a>
-						<a href="#clients" class="text-gray-300 hover:text-primary-500 transition-colors">Customers</a>
-						<a href="#pricing" class="text-gray-300 hover:text-primary-500 transition-colors">Pricing</a>
+						<a href="#home" class="text-gray-300 hover:text-primary-500 transition-colors"
+							aria-label="Go to Home section">Home</a>
+						<a href="#services" class="text-gray-300 hover:text-primary-500 transition-colors"
+							aria-label="Go to Features section">Features</a>
+						<a href="#projects" class="text-gray-300 hover:text-primary-500 transition-colors"
+							aria-label="Go to Use Cases section">Use Cases</a>
+						<a href="#clients" class="text-gray-300 hover:text-primary-500 transition-colors"
+							aria-label="Go to Customers section">Customers</a>
+						<a href="#pricing" class="text-gray-300 hover:text-primary-500 transition-colors"
+							aria-label="Go to Pricing section">Pricing</a>
 						<a href="#contact"
-							class="bg-primary-500 hover:bg-primary-600 px-4 py-2 rounded-lg text-white transition-colors">Get
+							class="bg-primary-500 hover:bg-primary-600 px-4 py-2 rounded-lg text-white transition-colors"
+							aria-label="Go to Get Started section">Get
 							Started</a>
 					</div>
 				</div>
 				<div class="md:hidden">
-					<button id="mobile-menu-button" class="text-gray-300 hover:text-white">
-						<i class="fas fa-bars text-xl"></i>
+					<button id="mobile-menu-button" class="text-gray-300 hover:text-white"
+						aria-label="Open mobile menu navigation">
+						<i class="fas fa-bars text-xl" aria-hidden="true"></i>
 					</button>
 				</div>
 			</div>
@@ -161,7 +168,8 @@
 	<!-- Hero Section -->
 	<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
 		<!-- Video Background -->
-		<video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+		<video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0"
+			aria-label="FlowAI hero background video showing animated abstract shapes">
 			<source src="assets/hero-video_high.mp4" type="video/mp4">
 		</video>
 
@@ -195,11 +203,13 @@
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 					<a href="#contact"
-						class="bg-primary-500 hover:bg-primary-600 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all transform hover:scale-105 glow-on-hover">
+						class="bg-primary-500 hover:bg-primary-600 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all transform hover:scale-105 glow-on-hover"
+						aria-label="Start your free trial with FlowAI">
 						Start Free Trial
 					</a>
 					<a href="#services"
-						class="border border-gray-600 hover:border-primary-500 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all hover:bg-primary-500/10">
+						class="border border-gray-600 hover:border-primary-500 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all hover:bg-primary-500/10"
+						aria-label="View FlowAI features">
 						View Features
 					</a>
 				</div>
@@ -412,7 +422,8 @@
 							</li>
 						</ul>
 						<a href="#contact"
-							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center">
+							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center"
+							aria-label="Get started with FlowAI free plan">
 							Get Started Free
 						</a>
 					</div>
@@ -454,7 +465,8 @@
 							</li>
 						</ul>
 						<a href="#contact"
-							class="w-full bg-matrix-500 hover:bg-matrix-600 text-black py-3 px-6 rounded-lg font-semibold transition-all glow-on-hover block text-center transform hover:scale-105">
+							class="w-full bg-matrix-500 hover:bg-matrix-600 text-black py-3 px-6 rounded-lg font-semibold transition-all glow-on-hover block text-center transform hover:scale-105"
+							aria-label="Start FlowAI professional free trial">
 							Start Free Trial
 						</a>
 					</div>
@@ -491,7 +503,8 @@
 							</li>
 						</ul>
 						<a href="#contact"
-							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center">
+							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center"
+							aria-label="Contact FlowAI sales team">
 							Contact Sales
 						</a>
 					</div>
@@ -529,7 +542,8 @@
 					</div>
 					<div class="text-center">
 						<button type="submit"
-							class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all glow-on-hover transform hover:scale-105">
+							class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all glow-on-hover transform hover:scale-105"
+							aria-label="Submit contact form">
 							SUBMIT
 						</button>
 					</div>
