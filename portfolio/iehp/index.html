@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>IEHP - A Health Plan That Fits YOU</title>
+
+	<meta name="keywords"
+		content="health insurance, Medi-Cal, community health, affordable healthcare, health coverage, wellness centers">
+	<meta name="description"
+		content="IEHP - Community-focused health plan serving families with comprehensive coverage. Three plans, one caring experience - designed to meet the needs of everyone.">
+	<meta name="author" content="IEHP">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						'sans': ['Inter', 'sans-serif'],
+					},
+					colors: {
+						primary: {
+							50: '#eff6ff',
+							100: '#dbeafe',
+							200: '#bfdbfe',
+							300: '#93c5fd',
+							400: '#60a5fa',
+							500: '#3b82f6',
+							600: '#2563eb',
+							700: '#1d4ed8',
+							800: '#1e40af',
+							900: '#1e3a8a',
+						},
+						healthcare: {
+							50: '#f0f9ff',
+							100: '#e0f2fe',
+							200: '#bae6fd',
+							300: '#7dd3fc',
+							400: '#38bdf8',
+							500: '#0ea5e9',
+							600: '#0284c7',
+							700: '#0369a1',
+							800: '#075985',
+							900: '#0c4a6e',
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Additional Styles -->
+	<style>
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+
+		@keyframes glow {
+			from {
+				box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+			}
+
+			to {
+				box-shadow: 0 0 30px rgba(14, 165, 233, 0.8);
+			}
+		}
+
+		.animate-float {
+			animation: float 6s ease-in-out infinite;
+		}
+
+		.glow-on-hover:hover {
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+
+		/* Smooth scrolling for all elements */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Custom scrollbar */
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #1f2937;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #0ea5e9;
+			border-radius: 4px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #0284c7;
+		}
+	</style>
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+	<!-- Navigation -->
+	<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<div class="flex items-center">
+					<div class="text-2xl font-bold text-healthcare-700">
+						<img src="assets/iehp_logo.png" alt="IEHP" class="h-8">
+					</div>
+				</div>
+				<div class="hidden md:block">
+					<div class="flex items-center space-x-8">
+						<a href="#home" class="text-gray-900 hover:text-healthcare-600 transition-colors">Home</a>
+						<a href="#services" class="text-gray-900 hover:text-healthcare-600 transition-colors">Health
+							Plans</a>
+						<a href="#workflows"
+							class="text-gray-900 hover:text-healthcare-600 transition-colors">Benefits</a>
+						<a href="#testimonials"
+							class="text-gray-900 hover:text-healthcare-600 transition-colors">Community</a>
+						<a href="#contact"
+							class="bg-healthcare-600 hover:bg-healthcare-700 px-4 py-2 rounded-lg text-white transition-colors">Enroll
+							Now</a>
+					</div>
+				</div>
+				<div class="md:hidden">
+					<button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900">
+						<i class="fas fa-bars text-xl"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="#home" class="block px-3 py-2 text-gray-800 hover:text-healthcare-600">Home</a>
+				<a href="#services" class="block px-3 py-2 text-gray-800 hover:text-healthcare-600">Health Plans</a>
+				<a href="#workflows" class="block px-3 py-2 text-gray-800 hover:text-healthcare-600">Benefits</a>
+				<a href="#testimonials" class="block px-3 py-2 text-gray-800 hover:text-healthcare-600">Community</a>
+				<a href="#contact" class="block px-3 py-2 text-gray-800 hover:text-healthcare-600">Enroll Now</a>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+		style="background: linear-gradient(rgba(240, 249, 255, 0.9), rgba(239, 246, 255, 0.9)), url('assets/hero2.jpg'); background-size: cover; background-position: center;">
+		<!-- Animated background elements -->
+		<div class="absolute inset-0 overflow-hidden">
+			<div class="absolute -top-40 -right-40 w-80 h-80 bg-healthcare-200/20 rounded-full blur-3xl animate-pulse">
+			</div>
+			<div
+				class="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl animate-pulse delay-1000">
+			</div>
+			<!-- Floating elements -->
+			<div class="absolute top-1/5 left-1/10 w-16 h-16 bg-healthcare-300/20 rounded-full animate-float"></div>
+			<div class="absolute top-3/5 right-1/6 w-10 h-10 bg-blue-300/20 rounded-full animate-float"
+				style="animation-delay: 2s;"></div>
+		</div>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+					A Health Plan That
+					<br>
+					<span class="bg-gradient-to-r from-healthcare-600 to-blue-600 bg-clip-text text-transparent">
+						Fits YOU
+					</span>
+				</h1>
+				<p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium">
+					When it comes to keeping our community healthy, we show up with our whole hearts, designed
+					to meet the needs of everyone.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+					<a href="#contact"
+						class="bg-healthcare-600 hover:bg-healthcare-700 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all transform hover:scale-105 glow-on-hover shadow-lg">
+						Enroll Now
+					</a>
+					<a href="#services"
+						class="border-2 border-healthcare-500 hover:border-healthcare-600 bg-white/80 hover:bg-white px-8 py-4 rounded-lg text-healthcare-600 font-semibold text-lg transition-all hover:shadow-lg">
+						Browse Plans
+					</a>
+				</div>
+				<div
+					class="flex items-center justify-center text-gray-600 text-sm bg-white/70 rounded-full px-4 py-2 inline-flex">
+					<i class="fas fa-heart mr-2 text-healthcare-500"></i>
+					<span class="font-medium">Community Focused • Comprehensive Coverage • Caring Experience</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Trust Section -->
+	<section class="py-16 bg-white border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<!-- Left side - Image -->
+				<div class="order-2 lg:order-1">
+					<div class="relative">
+						<img src="assets/healthcare1.jpg" alt="Healthcare professionals using AI technology"
+							class="w-full h-96 object-cover rounded-xl shadow-lg">
+						<div class="absolute inset-0 bg-healthcare-600/10 rounded-xl"></div>
+					</div>
+				</div>
+
+				<!-- Right side - Content -->
+				<div class="order-1 lg:order-2">
+					<div class="mb-8">
+						<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Trusted by Our Community</h2>
+						<p class="text-lg text-gray-600">Whether you're an individual, family, or senior, our health
+							plans are
+							built to serve our community with care and compassion. We're your neighbors, your community,
+							and your partners in health. We're health care with heart.</p>
+					</div>
+					<div class="grid grid-cols-2 gap-6">
+						<div class="text-center">
+							<div class="text-3xl md:text-4xl font-bold text-healthcare-600 mb-2">8,000+</div>
+							<div class="text-gray-600">Healthcare Providers</div>
+						</div>
+						<div class="text-center">
+							<div class="text-3xl md:text-4xl font-bold text-healthcare-600 mb-2">150K+</div>
+							<div class="text-gray-600">Members Served</div>
+						</div>
+						<div class="text-center">
+							<div class="text-3xl md:text-4xl font-bold text-healthcare-600 mb-2">90+</div>
+							<div class="text-gray-600">Urgent Care Centers</div>
+						</div>
+						<div class="text-center">
+							<div class="text-3xl md:text-4xl font-bold text-healthcare-600 mb-2">24/7</div>
+							<div class="text-gray-600">Nurse Advice Line</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Solutions Section -->
+	<section id="services" class="py-20 bg-gradient-to-br from-healthcare-50 to-blue-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Three Plans, One Caring Experience
+				</h2>
+				<p class="text-xl text-gray-600">PLANS DESIGNED TO MEET THE NEEDS OF EVERYONE</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-heart text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">Medi-Cal</h3>
+						<p class="text-gray-600">No-cost health coverage for qualified residents. Comprehensive benefits
+							including medical, dental, vision, and prescription coverage.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-users text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">DualChoice</h3>
+						<p class="text-gray-600">No-cost, integrated health plan for people with Medicare and Medi-Cal
+							coverage. Coordinated care for your unique needs.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-family text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">Covered California</h3>
+						<p class="text-gray-600">Low-cost health coverage program for those who don't quite qualify for
+							Medi-Cal. Quality care for you and your family.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-phone text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">24-Hour Nurse Advice Line</h3>
+						<p class="text-gray-600">Get free medical information and advice 24 hours a day, 365 days a year
+							from qualified healthcare professionals.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-car text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">Transportation Services</h3>
+						<p class="text-gray-600">We provide round-trip transportation for members to medical
+							appointments. It's easier that way.</p>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all">
+					<div class="text-center">
+						<div
+							class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-eye text-2xl text-healthcare-600"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-1">Vision Services</h3>
+						<p class="text-gray-600">We cover both eye exams as well as eyeglasses and contact lenses, when
+							needed. Complete vision care for the whole family.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us Section -->
+	<section id="workflows" class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits That Matter</h2>
+				<p class="text-xl text-gray-600">WE'RE SO MUCH MORE THAN AN INSURANCE PLAN</p>
+			</div>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<!-- Left side - Content -->
+				<div class="order-1 lg:order-1">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div class="text-center">
+							<div
+								class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+								<i class="fas fa-network-wired text-2xl text-healthcare-600"></i>
+							</div>
+							<h3 class="text-lg font-semibold text-gray-900 ">Extensive Doctor Network</h3>
+							<p class="text-gray-600">We've got more than 8,000 providers. That makes it easier to find
+								the care that's right for you.</p>
+						</div>
+						<div class="text-center">
+							<div
+								class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+								<i class="fas fa-calendar-check text-2xl text-healthcare-600"></i>
+							</div>
+							<h3 class="text-lg font-semibold text-gray-900 ">Care Coordination</h3>
+							<p class="text-gray-600">Our member services team can help you coordinate appointments,
+								treatments, medication and communications.</p>
+						</div>
+						<div class="text-center">
+							<div
+								class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+								<i class="fas fa-clock text-2xl text-healthcare-600"></i>
+							</div>
+							<h3 class="text-lg font-semibold text-gray-900 ">Urgent Care Centers</h3>
+							<p class="text-gray-600">We've got over 90 urgent care centers with extended hours. Access
+								to in-person care from anywhere.</p>
+						</div>
+						<div class="text-center">
+							<div
+								class="bg-healthcare-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+								<i class="fas fa-graduation-cap text-2xl text-healthcare-600"></i>
+							</div>
+							<h3 class="text-lg font-semibold text-gray-900 ">Health & Wellness Programs</h3>
+							<p class="text-gray-600">Access to classes and programs that help you manage your health and
+								live well in our community.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right side - Image -->
+				<div class="order-2 lg:order-2">
+					<div class="relative">
+						<img src="assets/healthcare2.jpg" alt="Community health benefits and wellness programs"
+							class="w-full h-96 object-cover rounded-xl shadow-lg">
+						<div class="absolute inset-0 bg-healthcare-600/10 rounded-xl"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Healthcare Organizations Section -->
+	<section class="py-16 bg-healthcare-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">IEHP Community Wellness Centers</h2>
+				<p class="text-lg text-gray-600">Our community wellness centers are open to every person in our
+					community.
+					Visit for free health and wellness classes, IEHP member assistance and much more. We're your
+					neighbors,
+					your community and your partners in health.</p>
+			</div>
+			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-heartbeat text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Health Classes</h4>
+				</div>
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-dumbbell text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Fitness Programs</h4>
+				</div>
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-apple-alt text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Nutrition</h4>
+				</div>
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-baby text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Doula Services</h4>
+				</div>
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-hands-helping text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Support Groups</h4>
+				</div>
+				<div class="text-center">
+					<div
+						class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+						<i class="fas fa-calendar-alt text-2xl text-healthcare-600"></i>
+					</div>
+					<h4 class="font-semibold text-gray-900">Community Events</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section id="testimonials" class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Member Testimonial</h2>
+				<p class="text-xl text-gray-600">REAL RESULTS FROM OUR COMMUNITY MEMBERS</p>
+			</div>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+				<!-- Left side - Image -->
+				<div class="order-2 lg:order-1">
+					<div class="relative">
+						<img src="assets/healthcare3.jpg" alt="Happy IEHP member family with health plan coverage"
+							class="w-full h-96 object-cover rounded-xl shadow-lg">
+						<div class="absolute inset-0 bg-healthcare-600/10 rounded-xl"></div>
+					</div>
+				</div>
+
+				<!-- Right side - Content -->
+				<div class="order-1 lg:order-2">
+					<div class="bg-healthcare-50 rounded-2xl p-8 md:p-12 border border-healthcare-200">
+						<div class="text-center">
+							<blockquote class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+								IEHP has been there for my family when we needed it most.
+								The extensive provider network made it easy to find quality care close to home,
+								and the member services team helped coordinate everything seamlessly.
+							</blockquote>
+							<div class="flex items-center justify-center">
+								<div
+									class="w-12 h-12 bg-healthcare-500 rounded-full flex items-center justify-center mr-4">
+									<span class="text-white font-semibold">SR</span>
+								</div>
+								<div class="text-left">
+									<div class="text-gray-900 font-semibold">Sarah R.</div>
+									<div class="text-gray-600">IEHP Member & Mother of Two</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-20 bg-healthcare-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Find Your Perfect Health Plan?
+				</h2>
+				<p class="text-xl text-gray-600 mb-8">Get the care you need with a plan that fits. Three plans, one
+					caring experience designed to meet the needs of everyone.</p>
+			</div>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+				<div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Get Started Today</h3>
+					<form class="space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<input type="text" placeholder="Full Name" required
+									class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-healthcare-500 focus:ring-1 focus:ring-healthcare-500">
+							</div>
+							<div>
+								<input type="email" placeholder="Email Address" required
+									class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-healthcare-500 focus:ring-1 focus:ring-healthcare-500">
+							</div>
+						</div>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<input type="tel" placeholder="Phone Number" required
+									class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-healthcare-500 focus:ring-1 focus:ring-healthcare-500">
+							</div>
+							<div>
+								<select required
+									class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-healthcare-500 focus:ring-1 focus:ring-healthcare-500">
+									<option value="">Plan Interest</option>
+									<option value="medi-cal">Medi-Cal</option>
+									<option value="dualchoice">DualChoice</option>
+									<option value="covered-ca">Covered California</option>
+									<option value="not-sure">Not Sure</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<textarea rows="4" placeholder="Tell us about your healthcare needs and how we can help..."
+								required
+								class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-healthcare-500 focus:ring-1 focus:ring-healthcare-500"></textarea>
+						</div>
+						<div class="text-center">
+							<button type="submit"
+								class="bg-healthcare-600 hover:bg-healthcare-700 text-white px-8 py-3 rounded-lg font-semibold transition-all glow-on-hover transform hover:scale-105 w-full md:w-auto">
+								Enroll Now
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="space-y-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+						<h3 class="text-xl font-bold text-gray-900 mb-6">Other Ways to Connect</h3>
+						<div class="space-y-6">
+							<div class="flex items-center">
+								<div
+									class="bg-healthcare-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+									<i class="fas fa-phone text-healthcare-600"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">IEHP Member Services</h4>
+									<p class="text-gray-600">1-800-440-IEHP (1-800-440-4347)</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div
+									class="bg-healthcare-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+									<i class="fas fa-envelope text-healthcare-600"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Email Us</h4>
+									<p class="text-gray-600">info@iehp.org</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<div
+									class="bg-healthcare-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+									<i class="fas fa-map-marker-alt text-healthcare-600"></i>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Visit an IEHP Wellness Center</h4>
+									<p class="text-gray-600">Find your nearest community location</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-healthcare-100 rounded-2xl p-6 border border-healthcare-200">
+						<div class="flex items-center mb-4">
+							<i class="fas fa-heart text-healthcare-600 text-2xl mr-3"></i>
+							<h4 class="font-semibold text-gray-900">IEHP Benefits</h4>
+						</div>
+						<ul class="space-y-2 text-sm text-gray-700">
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-2"></i>
+								8,000+ Healthcare Providers
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-2"></i>
+								24/7 Nurse Advice Line
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-2"></i>
+								Transportation Services
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-2"></i>
+								IEHP Community Wellness Centers
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 border-t border-gray-800 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+				<div class="col-span-1 md:col-span-2">
+					<div class="text-2xl font-bold text-white mb-4">
+						<img src="assets/iehp_logo_white.png" alt="IEHP Logo" class="h-10 inline-block">
+					</div>
+					<p class="text-gray-400 mb-4 max-w-md">
+						A health plan that fits YOU. We're your neighbors, your community and your partners in health.
+						When it comes to keeping our community healthy, we show up with our whole hearts.
+					</p>
+					<div class="flex space-x-4">
+						<a href="#" class="text-gray-400 hover:text-healthcare-400 transition-colors">
+							<i class="fab fa-linkedin-in text-xl"></i>
+						</a>
+						<a href="#" class="text-gray-400 hover:text-healthcare-400 transition-colors">
+							<i class="fab fa-twitter text-xl"></i>
+						</a>
+						<a href="#" class="text-gray-400 hover:text-healthcare-400 transition-colors">
+							<i class="fab fa-facebook-f text-xl"></i>
+						</a>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-white font-semibold mb-4">Health Plans</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-white text-gray-400">Medi-Cal</a></li>
+						<li><a href="#" class="hover:text-white transition-colors text-gray-400">DualChoice</a>
+						</li>
+						<li><a href="#" class="hover:text-white text-gray-400 transition-colors">Covered California</a>
+						</li>
+						<li><a href="#" class="hover:text-white text-gray-400 transition-colors">Member Portal</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="text-white font-semibold mb-4">Community</h4>
+					<ul class="space-y-2">
+						<li><a href="#" class="hover:text-white text-gray-400  transition-colors">Wellness Centers</a>
+						</li>
+						<li><a href="#" class="hover:text-white text-gray-400 transition-colors">Health Programs</a>
+						</li>
+						<li><a href="#" class="hover:text-white text-gray-400 transition-colors">Member Resources</a>
+						</li>
+						<li><a href="#" class="hover:text-white text-gray-400 transition-colors">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="border-t border-gray-800 pt-8 text-center">
+				<p class="text-gray-400">
+					<strong class="text-white">IEHP</strong> - © Copyright 2025. All Rights Reserved. |
+					A Public Entity Serving Our Community
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript for mobile menu -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuButton.addEventListener('click', function () {
+				mobileMenu.classList.toggle('hidden');
+			});
+
+			// Smooth scrolling for navigation links
+			const navLinks = document.querySelectorAll('a[href^="#"]');
+			navLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+					if (targetSection) {
+						targetSection.scrollIntoView({
+							behavior: 'smooth'
+						});
+						// Close mobile menu if open
+						mobileMenu.classList.add('hidden');
+					}
+				});
+			});
+		});
+	</script>
+
+
+
+
+
+	<!-- Smooth Scrolling Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Get all navigation links
+			const navLinks = document.querySelectorAll('a[href^="#"]');
+			const navHeight = 64; // Fixed navigation height
+
+			navLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+
+					if (targetSection) {
+						// Scroll to target section with offset for fixed nav
+						window.scrollTo({
+							top: targetSection.offsetTop - navHeight,
+							behavior: 'smooth'
+						});
+
+						// Update active navigation state
+						updateActiveNavigation(targetId);
+					}
+				});
+			});
+
+			// Function to update active navigation state
+			function updateActiveNavigation(targetId) {
+				// Remove active class from all nav links
+				navLinks.forEach(link => {
+					link.classList.remove('text-healthcare-600');
+					link.classList.add('text-gray-900');
+				});
+
+				// Add active class to current link
+				const currentLink = document.querySelector(`a[href="${targetId}"]`);
+				if (currentLink && !currentLink.classList.contains('bg-healthcare-600')) {
+					currentLink.classList.remove('text-gray-900');
+					currentLink.classList.add('text-healthcare-600');
+				}
+			}
+
+			// Update active navigation on scroll
+			window.addEventListener('scroll', function () {
+				const sections = document.querySelectorAll('section[id], div[id]');
+				const scrollPosition = window.scrollY + navHeight + 50;
+
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.offsetHeight;
+					const sectionId = section.getAttribute('id');
+
+					if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+						updateActiveNavigation(`#${sectionId}`);
+					}
+				});
+			});
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+	/* Newsletter Form Styling */
+		.newsletter-form .form-control {
+			height: 60px;
+			font-size: 16px;
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		.newsletter-form .form-control:focus {
+			border-color: #d4a574;
+			box-shadow: 0 0 0 0.2rem rgba(212, 165, 116, 0.25);
+		}
+
+		.newsletter-form .btn {
+						background-color: #ff6c1d;
+			color: #fff;
+			height: 60px;
+			border-radius: 0;
+			font-size: 14px;
+			letter-spacing: 1px;
+			transition: all 0.3s ease;
+		}
+
+		.newsletter-form .btn:hover {
+			background-color: #b33f01;
+			color: #fff;
+		}
+
+		#newsletter {
+			background: linear-gradient(135deg, #3b2716 0%, #5d4037 100%);
+		}
+
+		/* Mobile responsive adjustments */
+		@media (max-width: 768px) {
+			.newsletter-form .d-flex {
+				flex-direction: column !important;
+			}
+
+			.newsletter-form .form-control {
+				width: 100% !important;
+				margin-bottom: 15px !important;
+				border-radius: 5px !important;
+			}
+
+			.newsletter-form .btn {
+				width: 100% !important;
+				border-radius: 5px !important;
+				margin-left: 0 !important;
+			}
+		}

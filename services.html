@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Soo Hwangbo – Freelance Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Soo Hwangbo is a freelance web developer specializing in responsive websites, full-stack apps, and AI-powered tools for startups and businesses.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        'primary-dark': '#1e3a8a',
+                        'primary-light': '#3b82f6',
+                        'accent': '#0f172a',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class=" bg-gray-900 text-white shadow-lg  w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-1xl font-bold text-white hover:text-blue-300 transition duration-300">Soo
+                        Hwangbo</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/about.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">About</a>
+                    <a href="/services.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Services</a>
+                    <a href="/pricing.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Pricing</a>
+                    <a href="/portfolio.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Portfolio</a>
+                    <a href="/contact.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button"
+                        class="mobile-menu-button bg-gray-700 text-white p-2 rounded-md hover:bg-gray-800 transition duration-300"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-gray-600">
+                <a href="/about.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">About</a>
+                <a href="/services.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Services</a>
+                <a href="/pricing.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Pricing</a>
+                <a href="/portfolio.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Portfolio</a>
+                <a href="/contact.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-lg bg-white">
+            <div class="flex flex-col md:flex-row gap-12 py-10 items-center">
+                <!-- Text Column -->
+                <div>
+                    <div>
+                        <div class="text-center max-w-3xl mx-auto">
+                            <h3 class="text-4xl font-bold text-gray-800 mb-4 py-3">Services</h3>
+                            <p class="mb-6 text-lg">
+                                As a full-service web development partner, I deliver digital solutions that empower
+                                brands to
+                                stand out, scale, and succeed in today’s fast-moving market. Whether you’re a
+                                startup,
+                                creative,
+                                or established business, my approach combines strategic insight, modern technology,
+                                and
+                                design
+                                excellence to drive measurable results. Every project is tailored to your unique
+                                goals,
+                                ensuring
+                                a seamless blend of performance, aesthetics, and business value.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-10 pt-10">
+                        <div class="border border-gray-300 p-10">
+                            <div>
+                                <img class="mx-auto max-w-[200px] py-10 mx-auto max-w-[200px]"
+                                    src="/images/landing_page.jpg" />
+                            </div>
+                            <h4 class=" text-2xl font-bold text-gray-700 mb-4">Landing Pages</h4>
+                            <p class="mb-12 text-lg text-lg">
+                                High-impact landing pages engineered for conversion. I craft visually compelling,
+                                mobile-optimized pages
+                                with clear messaging and persuasive calls-to-action—perfect for product launches, ad
+                                campaigns,
+                                and lead
+                                generation. Each page is custom-designed to reflect your brand, built for speed, and
+                                rigorously
+                                tested
+                                to maximize results.
+                                <br><br>
+                                <span class="font-bold text-blue-900">What’s included:</span> Brand-aligned design,
+                                copywriting
+                                guidance, analytics integration, A/B testing setup, and rapid deployment.
+                            </p>
+                        </div>
+                        <div class="border border-gray-300 p-10">
+                            <img class="mx-auto max-w-[200px] py-10" src="/images/ui_ux_design.jpg" />
+                            <h4 class="text-2xl font-bold text-gray-700 mb-4">UX/UI Design</h4>
+                            <p class="mb-12 text-lg">
+                                User experience is at the heart of every successful product. I design modern, intuitive
+                                interfaces using
+                                React and industry best practices, ensuring your users enjoy seamless navigation and
+                                engaging
+                                interactions. My process includes research, wireframing, prototyping, and user testing
+                                to
+                                deliver
+                                solutions that are both beautiful and highly functional.
+                                <br><br>
+                                <span class="font-bold text-blue-900">What’s included:</span> UX research, interactive
+                                prototypes,
+                                accessibility compliance, responsive layouts, and design system creation.
+                            </p>
+                        </div>
+                        <div class="border border-gray-300 p-10">
+                            <img class="mx-auto max-w-[200px] py-10" src="/images/wordpress.jpg" />
+                            <h4 class="text-2xl font-bold text-gray-700 mb-4">WordPress</h4>
+                            <p class="mb-12 text-lg">
+                                Scalable, easy-to-manage WordPress solutions for businesses that need flexibility
+                                and
+                                control. I
+                                develop
+                                custom themes, plugins, and integrations, empowering you to update content, manage
+                                products, and
+                                grow
+                                your online presence with ease. All sites are optimized for SEO, security, and
+                                performance,
+                                ensuring
+                                your business is ready to scale.
+                                <br><br>
+                                <span class="font-bold text-blue-900">What’s included:</span> Custom theme
+                                development,
+                                plugin
+                                integration, e-commerce setup, SEO optimization, and training/support.
+                            </p>
+                        </div>
+                        <div class="border border-gray-300 p-10">
+                            <img class="mx-auto max-w-[200px] py-10" src="/images/full-stack.jpg" />
+                            <h4 class="text-2xl font-bold text-gray-700 mb-4">Full Stack Web Applications</h4>
+                            <p class="mb-12 text-lg">
+                                Comprehensive web application development from concept to launch. I architect
+                                robust,
+                                scalable
+                                solutions
+                                using React, Node.js, and cloud platforms—handling everything from user
+                                authentication
+                                and
+                                dashboards to
+                                API integrations and analytics. Whether you need a SaaS platform, internal tool, or
+                                custom
+                                business app,
+                                I deliver secure, future-ready products tailored to your needs.
+                                <br><br>
+                                <span class="font-bold text-blue-900">What’s included:</span> Solution architecture,
+                                frontend &
+                                backend development, database design, API integration, deployment, and ongoing
+                                support.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 mt-8 p-10 flex items-center justify-between max-w-5xl mx-auto">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-4 text-gray-700">Why Partner With Me?</h4>
+                            <p class="text-lg leading-relaxed mb-4">
+                                I combine agency-level expertise with the agility and personal attention of a
+                                dedicated
+                                freelancer. My process is transparent, collaborative, and results-driven—focused on
+                                delivering measurable business value, not just code. From strategy and design to
+                                launch and
+                                support, I’m committed to your success at every stage.
+                            </p>
+                            <a href="/contact.html"
+                                class="inline-block bg-blue-900 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg mt-10">
+                                Start Your Project
+                            </a>
+                        </div>
+                        <div>
+                            <img src="/images/soo_dev.jpg" class="mb-20 p-5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-300">
+                © 2025 Soo Hwangbo. Based in California, building worldwide.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

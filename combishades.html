@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Soo Hwangbo – Freelance Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Soo Hwangbo is a freelance web developer specializing in responsive websites, full-stack apps, and AI-powered tools for startups and businesses.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        'primary-dark': '#1e3a8a',
+                        'primary-light': '#3b82f6',
+                        'accent': '#0f172a',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-image {
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class=" bg-gray-900 text-white shadow-lg  w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-1xl font-bold text-white hover:text-blue-300 transition duration-300">Soo
+                        Hwangbo</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/about.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">About</a>
+                    <a href="/services.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Services</a>
+                    <a href="/pricing.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Pricing</a>
+                    <a href="/portfolio.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Portfolio</a>
+                    <a href="/contact.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button"
+                        class="mobile-menu-button bg-gray-700 text-white p-2 rounded-md hover:bg-gray-800 transition duration-300"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-gray-600">
+                <a href="/about.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">About</a>
+                <a href="/services.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Services</a>
+                <a href="/pricing.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Pricing</a>
+                <a href="/portfolio.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Portfolio</a>
+                <a href="/contact.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- What is Flow AI Section -->
+    <section class="bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-lg bg-white">
+            <div class="h-[500px] flex items-center justify-center mx-auto pt-10">
+                <img src="images/mockups/combishades_screen.jpg" alt="Combishades website desktop preview"
+                    class="w-full h-full object-cover">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-10">
+                <!-- Left Column -->
+                <div>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-4 py-3">Combishades Project</h3>
+
+                    <p class="mb-6 text-lg"><span class="font-bold">About</span><br>Combishades® is a leader in
+                        innovative window shading systems, offering revolutionary design concepts and high-quality
+                        products for home and business decoration. Their solutions combine style, safety, and advanced
+                        technology to enhance any space.</p>
+                    <p class="mb-6 text-lg"><span class="font-bold">Goal</span><br>Design and develop a modern,
+                        informative website to showcase Combishades®'s unique product lines, highlight their cord-free
+                        and child-safe solutions, and support both customers and fabricator partners in learning about
+                        and purchasing their products.</p>
+                    <p class="mb-6 text-lg"><span class="font-bold">Role</span><br>UI/UX designer and front-end
+                        developer responsible for branding, layout, copywriting, responsive design, and integrating
+                        product galleries, partner application forms, and contact features.</p>
+                    <p class="mb-6 text-lg"><span class="font-bold">Features</span><br>Product showcase (Combi Shade®,
+                        Roller Shade, Triple Shade™, Veilette™), intuitive fabric preview, fabricator partner program,
+                        cord-free child safety
+                        information, consultation booking, contact form, and business information.</p>
+                    <p class="mb-6 text-lg"><span class="font-bold">Tools</span><br>HTML, CSS, JavaScript, Bootstrap,
+                        PHP,
+                        and custom graphics.</p>
+                    <a href="https://combishades.com/"
+                        class="inline-block font-semibold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-lg border border-gray-500 mt-5">
+                        Like to Project
+                    </a>
+                </div>
+                <!-- Right Column -->
+                <div class="flex justify-center">
+                    <div class="w-full">
+                        <img src="images/mockups/combishades_web.jpg" alt="Combishades website full-page view"
+                            class="mx-auto">
+                        <img src="images/mockups/combishades_mobile.jpg" alt="Combishades website mobile view"
+                            class="mx-auto  mt-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-300">
+                © 2025 Soo Hwangbo. Based in California, building worldwide.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

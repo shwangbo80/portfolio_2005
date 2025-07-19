@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Soo Hwangbo – Freelance Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Soo Hwangbo is a freelance web developer specializing in responsive websites, full-stack apps, and AI-powered tools for startups and businesses.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        'primary-dark': '#1e3a8a',
+                        'primary-light': '#3b82f6',
+                        'accent': '#0f172a',
+                        dark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class=" bg-gray-900 text-white shadow-lg  w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-1xl font-bold text-white hover:text-blue-300 transition duration-300">Soo
+                        Hwangbo</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/about.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">About</a>
+                    <a href="/services.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Services</a>
+                    <a href="/pricing.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Pricing</a>
+                    <a href="/portfolio.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Portfolio</a>
+                    <a href="/contact.html"
+                        class="text-gray-300 hover:text-white transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button"
+                        class="mobile-menu-button bg-gray-700 text-white p-2 rounded-md hover:bg-gray-800 transition duration-300"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-gray-600">
+                <a href="/about.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">About</a>
+                <a href="/services.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Services</a>
+                <a href="/pricing.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Pricing</a>
+                <a href="/portfolio.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Portfolio</a>
+                <a href="/contact.html"
+                    class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-lg bg-white">
+            <div class="flex flex-col md:flex-row gap-12 py-10 items-center">
+                <!-- Text Column -->
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class=" text-4xl font-bold text-gray-800 mb-4 py-3">Portfolio</h3>
+                    <p class="mb-6 text-lg">
+                        As a full-service web development partner, I deliver digital solutions that empower
+                        brands to
+                        stand out, scale, and succeed in today’s fast-moving market. Whether you’re a
+                        startup,
+                        creative,
+                        or established business, my approach combines strategic insight, modern technology,
+                        and
+                        design
+                        excellence to drive measurable results. Every project is tailored to your unique
+                        goals,
+                        ensuring
+                        a seamless blend of performance, aesthetics, and business value.
+                    </p>
+                </div>
+            </div>
+            <!-- Portfolio -->
+            <div class="sm:px-6 lg:px-8 pt-10 max-w-6xl mx-auto ">
+                <div class="text-center">
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <a href="/flowai.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Flow AI</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/flowai_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Conversational AI that automates customer support and
+                                sales.</p>
+                        </a>
+
+                        <a href="/iehp.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">IEHP</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/iehp_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="pt-5 text-gray-600 text-md">Healthcare portal redesign for seamless member
+                                experience.</p>
+                        </a>
+
+                        <a href="/brewhaus.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Brewhaus</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/brewhaus_screen.png" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Brand identity and web presence for a modern brewery.
+                            </p>
+                        </a>
+
+                        <a href="/skinjuice.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Skinjuice</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/skinjuice_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-lg">E-commerce and booking for a boutique skincare studio.
+                            </p>
+                        </a>
+
+                        <a href="/exactuspma.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Exactus</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/exactus_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Project management made simple for busy teams.</p>
+                        </a>
+
+                        <a href="/hocfc.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">HOCFC</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/hocfc_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="pt-5 text-gray-600 text-md">Nonprofit website built for community impact.</p>
+                        </a>
+                        <a href="/combishades.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Combishades</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/combishades_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Custom shades, custom experience—online and in-store.
+                            </p>
+                        </a>
+
+                        <a href="/gnasky.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Gnasky</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/gnasky_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Aviation solutions with a digital edge.</p>
+                        </a>
+
+                        <a href="/studio333.html"
+                            class="bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform group border border-gray-200 overflow-hidden">
+                            <!-- Colored header bar -->
+                            <div class="bg-blue-900 px-6 py-4">
+                                <h5 class="text-xl font-bold text-white">Studio333</h5>
+                            </div>
+                            <!-- Content area -->
+                            <img src="/images/mockups/studio333_screen.jpg" alt="Flow AI project screenshot"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <p class="p-5 text-gray-600 text-md">Creative agency site for a new generation of brands.
+                            </p>
+                        </a>
+
+                    </div>
+                    <p class="text-lg text-gray-700 pt-5 pb-20">
+                        Want to see more work?
+                        <a href="/contact.html" class="text-gray-500 hover:text-gray-700 font-bold">Let's
+                            build yours next.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-300">
+                © 2025 Soo Hwangbo. Based in California, building worldwide.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

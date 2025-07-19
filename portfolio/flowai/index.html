@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>FlowAI - Intelligent Workflow Automation for Modern Teams</title>
+
+	<meta name="keywords" content="AI workflow automation, team productivity, smart collaboration">
+	<meta name=" description"
+		content="Transform your team's productivity with FlowAI's intelligent automation platform designed">
+	<meta name=" author" content="FlowAI">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						'sans': ['Inter', 'sans-serif'],
+					},
+					colors: {
+						primary: {
+							50: '#f0f9ff',
+							500: '#6366f1',
+							600: '#5856eb',
+							700: '#4f46e5',
+							900: '#312e81',
+						}
+					}
+				}
+			}
+		}
+	</script>
+
+	<!-- Additional Styles -->
+	<style>
+		@keyframes float {
+
+			0%,
+			100% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+
+		@keyframes glow {
+			from {
+				box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+			}
+
+			to {
+				box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+			}
+		}
+
+		.animate-float {
+			animation: float 6s ease-in-out infinite;
+		}
+
+		.glow-on-hover:hover {
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+
+		/* Smooth scrolling for all elements */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Custom scrollbar */
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #1f2937;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #6366f1;
+			border-radius: 4px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #4f46e5;
+		}
+	</style>
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+	<!-- Navigation -->
+	<nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<div class="flex items-center">
+					<div class="text-2xl font-bold text-white">
+						Flow<span class="text-primary-500">AI</span>
+					</div>
+				</div>
+				<div class="hidden md:block">
+					<div class="flex items-center space-x-8">
+						<a href="#home" class="text-gray-300 hover:text-primary-500 transition-colors">Home</a>
+						<a href="#services" class="text-gray-300 hover:text-primary-500 transition-colors">Features</a>
+						<a href="#projects" class="text-gray-300 hover:text-primary-500 transition-colors">Use Cases</a>
+						<a href="#clients" class="text-gray-300 hover:text-primary-500 transition-colors">Customers</a>
+						<a href="#pricing" class="text-gray-300 hover:text-primary-500 transition-colors">Pricing</a>
+						<a href="#contact"
+							class="bg-primary-500 hover:bg-primary-600 px-4 py-2 rounded-lg text-white transition-colors">Get
+							Started</a>
+					</div>
+				</div>
+				<div class="md:hidden">
+					<button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+						<i class="fas fa-bars text-xl"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="#home" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Home</a>
+				<a href="#services" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Features</a>
+				<a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Use Cases</a>
+				<a href="#clients" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Customers</a>
+				<a href="#pricing" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Pricing</a>
+				<a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-primary-500">Get Started</a>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+		<!-- Video Background -->
+		<video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+			<source src="assets/hero-video_high.mp4" type="video/mp4">
+		</video>
+
+		<!-- Dark overlay for better text readability -->
+		<div class="absolute inset-0 bg-black/60 z-10"></div>
+
+		<!-- Animated background elements -->
+		<div class="absolute inset-0 overflow-hidden z-20">
+			<div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl animate-pulse">
+			</div>
+			<div
+				class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000">
+			</div>
+			<!-- Floating elements -->
+			<div class="absolute top-1/5 left-1/10 w-16 h-16 bg-primary-500/20 rounded-full animate-float"></div>
+			<div class="absolute top-3/5 right-1/6 w-10 h-10 bg-purple-500/20 rounded-full animate-float"
+				style="animation-delay: 2s;"></div>
+		</div>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-30">
+			<div class="max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+					Streamline Your Business with
+					<span class="bg-gradient-to-r from-primary-500 to-purple-500 bg-clip-text text-transparent">
+						Intelligent Automation
+					</span>
+				</h1>
+				<p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+					Join <span class="text-primary-500 font-semibold">2,500+</span> growing companies using FlowAI to
+					automate workflows, boost productivity, and scale their operations efficiently
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+					<a href="#contact"
+						class="bg-primary-500 hover:bg-primary-600 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all transform hover:scale-105 glow-on-hover">
+						Start Free Trial
+					</a>
+					<a href="#services"
+						class="border border-gray-600 hover:border-primary-500 px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all hover:bg-primary-500/10">
+						View Features
+					</a>
+				</div>
+				<div class="flex items-center justify-center text-gray-400 text-sm">
+					<i class="fas fa-shield-alt mr-2"></i>
+					<span>No credit card required • 14-day free trial • Cancel anytime</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section id="services" class="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Platform Features</h2>
+				<p class="text-xl text-white/80">POWERFUL AUTOMATION TOOLS FOR MODERN BUSINESSES</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-cogs text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">WORKFLOW AUTOMATION</h3>
+					<p class="text-white/80">Automate repetitive tasks across your business processes. Connect apps,
+						trigger actions, and eliminate manual work with our visual workflow builder.</p>
+				</div>
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-chart-bar text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">SMART ANALYTICS</h3>
+					<p class="text-white/80">Get actionable insights from your business data. Track performance,
+						identify bottlenecks, and make data-driven decisions with real-time dashboards.</p>
+				</div>
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-users text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">TEAM COLLABORATION</h3>
+					<p class="text-white/80">Centralize communication and project management. Share workflows, assign
+						tasks, and keep everyone aligned with integrated collaboration tools.</p>
+				</div>
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-file-alt text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">DOCUMENT PROCESSING</h3>
+					<p class="text-white/80">Extract, analyze, and organize documents automatically. Handle invoices,
+						contracts, and forms with AI-powered document intelligence.</p>
+				</div>
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-user-tie text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">CRM INTEGRATION</h3>
+					<p class="text-white/80">Sync customer data across platforms. Automate lead scoring, follow-ups, and
+						customer communications to boost sales efficiency.</p>
+				</div>
+				<div class="text-center">
+					<div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+						<i class="fas fa-desktop text-2xl text-white"></i>
+					</div>
+					<h3 class="text-xl font-semibold text-white mb-4">UNIFIED DASHBOARD</h3>
+					<p class="text-white/80">Monitor all your automated processes from one place. Get real-time status
+						updates, performance metrics, and alerts when action is needed.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Cases Section -->
+	<section id="projects" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Use Cases</h2>
+				<p class="text-xl text-gray-300 mb-4">REAL AUTOMATION SOLUTIONS FOR EVERY BUSINESS</p>
+				<p class="text-gray-400 max-w-3xl mx-auto">See how businesses like yours are using FlowAI to streamline
+					operations, reduce costs, and accelerate growth across different industries and departments.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div
+					class="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-primary-500 transition-all duration-300 hover:transform hover:scale-105">
+					<div class="text-center">
+						<div
+							class="bg-primary-500/60 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-chart-line text-2xl text-white"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-4">Sales Automation</h3>
+						<p class="text-gray-300">Automate lead scoring, follow-ups, and deal progression. Increase
+							conversion rates by 40% with intelligent sales workflows.</p>
+					</div>
+				</div>
+				<div
+					class="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-primary-500 transition-all duration-300 hover:transform hover:scale-105">
+					<div class="text-center">
+						<div
+							class="bg-primary-500/60 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-headset text-2xl text-white"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-4">Customer Support</h3>
+						<p class="text-gray-300">Deploy intelligent chatbots and ticket routing. Reduce response times
+							by 70% while maintaining high satisfaction scores.</p>
+					</div>
+				</div>
+				<div
+					class="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-primary-500 transition-all duration-300 hover:transform hover:scale-105">
+					<div class="text-center">
+						<div
+							class="bg-primary-500/60 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+							<i class="fas fa-file-invoice text-2xl text-white"></i>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-4">Document Processing</h3>
+						<p class="text-gray-300">Extract and process data from invoices, contracts, and forms. Save 15+
+							hours per week on manual data entry tasks.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section id="clients" class="py-20 bg-gradient-to-r from-gray-800 to-gray-900">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
+				<p class="text-xl text-gray-300">2,500+ COMPANIES ACROSS 50 COUNTRIES TRUST FLOWAI</p>
+			</div>
+			<div class="max-w-4xl mx-auto">
+				<div class="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700">
+					<div class="text-center">
+						<blockquote class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+							FlowAI transformed our invoice processing from a 3-day manual task to a 30-minute automated
+							workflow. We've reduced processing costs by 85% and eliminated human errors completely.
+						</blockquote>
+						<div class="flex items-center justify-center">
+							<div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mr-4">
+								<span class="text-white font-semibold">MC</span>
+							</div>
+							<div class="text-left">
+								<div class="text-white font-semibold">Michael Chen</div>
+								<div class="text-gray-400">CFO at TechFlow Solutions</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Stats Section -->
+	<section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+				<div class="text-center">
+					<div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">2,500+</div>
+					<div class="text-gray-300">Active Companies</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">1M+</div>
+					<div class="text-gray-300">Workflows Automated</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">85%</div>
+					<div class="text-gray-300">Average Cost Reduction</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">24/7</div>
+					<div class="text-gray-300">Automated Processing</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section id="pricing" class="py-20 bg-gray-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+				<p class="text-xl text-gray-300 mb-4">CHOOSE THE PLAN THAT FITS YOUR BUSINESS NEEDS</p>
+				<p class="text-gray-400">Start with our free plan and scale as you grow. No hidden fees, no long-term
+					contracts.</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<!-- Starter Plan -->
+				<div class="bg-gray-900 rounded-2xl p-8 border border-gray-700">
+					<div class="text-center">
+						<h3 class="text-2xl font-bold text-white mb-4">Starter</h3>
+						<p class="text-gray-400 mb-6">Perfect for small teams getting started with automation</p>
+						<div class="mb-8">
+							<span class="text-5xl font-bold text-matrix-500">$0</span>
+							<span class="text-gray-400">/month</span>
+						</div>
+						<ul class="text-left space-y-3 mb-8">
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Up to 100 workflow runs/month</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">5 active workflows</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Basic integrations</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Email support</span>
+							</li>
+						</ul>
+						<a href="#contact"
+							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center">
+							Get Started Free
+						</a>
+					</div>
+				</div>
+
+				<!-- Professional Plan -->
+				<div class="bg-gray-900 rounded-2xl p-8 border-2 border-matrix-500 relative">
+					<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+						<span class="bg-matrix-500 text-black px-4 py-2 rounded-full text-sm font-semibold">Most
+							Popular</span>
+					</div>
+					<div class="text-center">
+						<h3 class="text-2xl font-bold text-white mb-4">Professional</h3>
+						<p class="text-gray-400 mb-6">Ideal for growing businesses with complex workflows</p>
+						<div class="mb-8">
+							<span class="text-5xl font-bold text-matrix-500">$49</span>
+							<span class="text-gray-400">/month</span>
+						</div>
+						<ul class="text-left space-y-3 mb-8">
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Up to 10,000 workflow runs/month</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Unlimited workflows</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Advanced integrations</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Priority support</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Analytics & reporting</span>
+							</li>
+						</ul>
+						<a href="#contact"
+							class="w-full bg-matrix-500 hover:bg-matrix-600 text-black py-3 px-6 rounded-lg font-semibold transition-all glow-on-hover block text-center transform hover:scale-105">
+							Start Free Trial
+						</a>
+					</div>
+				</div>
+
+				<!-- Enterprise Plan -->
+				<div class="bg-gray-900 rounded-2xl p-8 border border-gray-700">
+					<div class="text-center">
+						<h3 class="text-2xl font-bold text-white mb-4">Enterprise</h3>
+						<p class="text-gray-400 mb-6">For large organizations with advanced requirements</p>
+						<div class="mb-8">
+							<span class="text-5xl font-bold text-primary-500">Custom</span>
+						</div>
+						<ul class="text-left space-y-3 mb-8">
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Unlimited everything</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Custom integrations</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">Dedicated account manager</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">24/7 phone support</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-check text-green-500 mr-3"></i>
+								<span class="text-gray-300">On-premise deployment</span>
+							</li>
+						</ul>
+						<a href="#contact"
+							class="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors block text-center">
+							Contact Sales
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get Started Today</h2>
+				<p class="text-xl text-gray-300">READY TO TRANSFORM YOUR TEAM'S PRODUCTIVITY?</p>
+			</div>
+			<div class="max-w-2xl mx-auto">
+				<form class="space-y-6">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<input type="text" placeholder="Name" required
+								class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500">
+						</div>
+						<div>
+							<input type="email" placeholder="Email" required
+								class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500">
+						</div>
+					</div>
+					<div>
+						<input type="text" placeholder="Subject" required
+							class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500">
+					</div>
+					<div>
+						<textarea rows="5" placeholder="Message" required
+							class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"></textarea>
+					</div>
+					<div class="text-center">
+						<button type="submit"
+							class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all glow-on-hover transform hover:scale-105">
+							SUBMIT
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 border-t border-gray-800 py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<p class="text-gray-400">
+					<strong class="text-white">FLOWAI</strong> - © Copyright 2025. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript for mobile menu -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuButton.addEventListener('click', function () {
+				mobileMenu.classList.toggle('hidden');
+			});
+
+			// Smooth scrolling for navigation links
+			const navLinks = document.querySelectorAll('a[href^="#"]');
+			navLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+					if (targetSection) {
+						targetSection.scrollIntoView({
+							behavior: 'smooth'
+						});
+						// Close mobile menu if open
+						mobileMenu.classList.add('hidden');
+					}
+				});
+			});
+		});
+	</script>
+
+
+
+
+
+	<!-- Smooth Scrolling Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Get all navigation links
+			const navLinks = document.querySelectorAll('a[href^="#"]');
+			const navHeight = 64; // Fixed navigation height
+
+			navLinks.forEach(link => {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+
+					if (targetSection) {
+						// Scroll to target section with offset for fixed nav
+						window.scrollTo({
+							top: targetSection.offsetTop - navHeight,
+							behavior: 'smooth'
+						});
+
+						// Update active navigation state
+						updateActiveNavigation(targetId);
+					}
+				});
+			});
+
+			// Function to update active navigation state
+			function updateActiveNavigation(targetId) {
+				// Remove active class from all nav links
+				navLinks.forEach(link => {
+					link.classList.remove('text-primary-500');
+					link.classList.add('text-gray-300');
+				});
+
+				// Add active class to current link
+				const currentLink = document.querySelector(`a[href="${targetId}"]`);
+				if (currentLink && !currentLink.classList.contains('bg-primary-500')) {
+					currentLink.classList.remove('text-gray-300');
+					currentLink.classList.add('text-primary-500');
+				}
+			}
+
+			// Update active navigation on scroll
+			window.addEventListener('scroll', function () {
+				const sections = document.querySelectorAll('section[id], div[id]');
+				const scrollPosition = window.scrollY + navHeight + 50;
+
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.offsetHeight;
+					const sectionId = section.getAttribute('id');
+
+					if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+						updateActiveNavigation(`#${sectionId}`);
+					}
+				});
+			});
+		});
+	</script>
+
+</body>
+
+</html>
